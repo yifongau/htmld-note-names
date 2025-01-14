@@ -8,44 +8,44 @@ console.log(model)
 A pitchClass is the set of all pitches that are related to each other
 through octave equivalence and/or enharmonic equivalence
 */
-function initPitchClasses(int){
-  const initModel = Array.from({length: int})
-  return initModel
-}
+function generateModel(int){
+  const chromaticScaleSharps = ["C","C♯","D","D♯","E","F","F♯","G","G♯","A","A♯","B"]
+  const chromaticScaleFlats = ["C","D♭","D","E♭","E","F","G♭","G","A♭","A","B♭","B"]
 
-function addOctaves(initModel, int) {
-  const anonModel = initModel.map((pitchClass) => 
+  function pitchClasses(x) { 
+    return function (x) => Array.from({length: x}) 
+  }
+
+  function Octaves(x) {
+    return function (x) => 
+
+  }
+
+  const addOctaves = pitchClasses.map((pitchClass) => 
     pitchClass = Array.from({length: int})
   )
 
-  const anonModel1 = anonModel.map((pitchClass,x) =>
+  const addAnonProperties = addOctaves.map((pitchClass,x) =>
     pitchClass = pitchClass.map((pitch,y) =>
       pitch = { pitchClass: x, octave: y }
     )
   )
-  return anonModel1
+
+  const namedModel = addAnonProperties.map((pitchClass) =>
+    pitchClass = pitchClass.map((pitch) =>
+      pitch = pitch.map((names) =>
+    )
+  )
+
+
 }
 
-function addNoteNames(anonModel) {
-  const noteNames = ["C","D","E","F","G","A","B"]
-  const accidentals = ['', '♭', '♯']
   
-  function chromaticScale(){}
+   
+  
+
 
   return namedModel
 }
 
-function translatePitch(pitch) {
 
-}
-
-function toneDifference(int, pitch) {
-  result = pitch + int
-  return pitch
-
-}
-
-
-
-
-// pitch is combination of noteName and octave, e.g. C4
